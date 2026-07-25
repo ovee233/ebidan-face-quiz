@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBiDAN Face Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ホーム画面 -->
+    <section id="homeScreen" class="screen">
+
+        <img src="images/top/ebidan.jpg" alt="EBiDAN" class="top-image">
+
+        <h1>EBiDAN Face Quiz</h1>
+        <p>60人の顔と名前を覚えよう！</p>
+
+        <button id="startBtn">START</button>
+
+    </section>
+
+    <!-- モード選択 -->
+    <section id="modeScreen" class="screen hidden">
+
+        <h2>モードを選択</h2>
+
+        <button class="modeBtn" data-mode="all">全60人</button>
+        <button class="modeBtn" data-mode="chotokkyu">超特急</button>
+        <button class="modeBtn" data-mode="milk">M!LK</button>
+        <button class="modeBtn" data-mode="superdragon">SUPER★DRAGON</button>
+        <button class="modeBtn" data-mode="sakurashimeji">Sakurashimeji</button>
+        <button class="modeBtn" data-mode="oneonly">ONE N' ONLY</button>
+        <button class="modeBtn" data-mode="genjibu">原因は自分にある。</button>
+        <button class="modeBtn" data-mode="buddiis">BUDDiiS</button>
+        <button class="modeBtn" data-mode="icex">ICEx</button>
+        <button class="modeBtn" data-mode="lienel">Lienel</button>
+
+    </section>
+
+    <!-- 問題数 -->
+    <section id="countScreen" class="screen hidden">
+
+        <h2>問題数を選択</h2>
+
+        <button class="countBtn" data-count="10">10問</button>
+        <button class="countBtn" data-count="20">20問</button>
+        <button class="countBtn" data-count="all">全部</button>
+
+        <button id="backModeBtn" class="subButton">← モード選択へ戻る</button>
+
+    </section>
+
+    <!-- クイズ -->
+    <section id="quizScreen" class="screen hidden">
+
+        <div id="progress">
+            問題 <span id="currentQuestion">1</span> /
+            <span id="totalQuestion">10</span>
+        </div>
+
+        <img id="quizImage" class="quiz-image" src="" alt="問題画像">
+
+        <h2>この人は誰？</h2>
+
+        <div id="choices">
+            <!-- JavaScriptで4択を生成 -->
+        </div>
+
+    </section>
+
+    <!-- 結果 -->
+<section id="resultScreen" class="screen hidden">
+    <h2>結果発表</h2>
+
+    <p id="resultText"></p>
+
+    <button id="reviewBtn" class="hidden">
+        間違えた人だけ復習
+    </button>
+
+    <button id="retryBtn">
+        モード選択へ戻る
+    </button>
+</section><section id="resultScreen" class="screen hidden">
+    <h2>結果発表</h2>
+
+    <p id="resultText"></p>
+
+    <button id="reviewBtn" class="hidden">
+        間違えた人だけ復習
+    </button>
+
+    <button id="retryBtn">
+        モード選択へ戻る
+    </button>
+</section>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
